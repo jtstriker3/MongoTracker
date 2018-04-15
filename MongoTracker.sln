@@ -1,39 +1,54 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26114.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9A7ED981-639A-46DE-A88F-72E7DCABF13C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4A5BE145-E129-4F3E-93CA-57C1EF8534BC}"
-	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoTracker", "src\MongoTracker\MongoTracker.csproj", "{F6C1B566-5362-4756-BA12-147508630707}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "MongoTracker", "src\MongoTracker\MongoTracker.xproj", "{133D95CA-7DA6-4FB8-A087-3343628622DF}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "MongoTracker.Test", "src\MongoTracker.Test\MongoTracker.Test.xproj", "{A298FF61-94B5-40A6-BD91-17EDDB640FC2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoTracker.Test", "src\MongoTracker.Test\MongoTracker.Test.csproj", "{ADA409C6-1F7A-4B2A-A57D-E5720E264E11}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{133D95CA-7DA6-4FB8-A087-3343628622DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{133D95CA-7DA6-4FB8-A087-3343628622DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{133D95CA-7DA6-4FB8-A087-3343628622DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{133D95CA-7DA6-4FB8-A087-3343628622DF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A298FF61-94B5-40A6-BD91-17EDDB640FC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A298FF61-94B5-40A6-BD91-17EDDB640FC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A298FF61-94B5-40A6-BD91-17EDDB640FC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A298FF61-94B5-40A6-BD91-17EDDB640FC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6C1B566-5362-4756-BA12-147508630707}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6C1B566-5362-4756-BA12-147508630707}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6C1B566-5362-4756-BA12-147508630707}.Debug|x64.ActiveCfg = Debug|x64
+		{F6C1B566-5362-4756-BA12-147508630707}.Debug|x64.Build.0 = Debug|x64
+		{F6C1B566-5362-4756-BA12-147508630707}.Debug|x86.ActiveCfg = Debug|x86
+		{F6C1B566-5362-4756-BA12-147508630707}.Debug|x86.Build.0 = Debug|x86
+		{F6C1B566-5362-4756-BA12-147508630707}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6C1B566-5362-4756-BA12-147508630707}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6C1B566-5362-4756-BA12-147508630707}.Release|x64.ActiveCfg = Release|x64
+		{F6C1B566-5362-4756-BA12-147508630707}.Release|x64.Build.0 = Release|x64
+		{F6C1B566-5362-4756-BA12-147508630707}.Release|x86.ActiveCfg = Release|x86
+		{F6C1B566-5362-4756-BA12-147508630707}.Release|x86.Build.0 = Release|x86
+		{ADA409C6-1F7A-4B2A-A57D-E5720E264E11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADA409C6-1F7A-4B2A-A57D-E5720E264E11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADA409C6-1F7A-4B2A-A57D-E5720E264E11}.Debug|x64.ActiveCfg = Debug|x64
+		{ADA409C6-1F7A-4B2A-A57D-E5720E264E11}.Debug|x64.Build.0 = Debug|x64
+		{ADA409C6-1F7A-4B2A-A57D-E5720E264E11}.Debug|x86.ActiveCfg = Debug|x86
+		{ADA409C6-1F7A-4B2A-A57D-E5720E264E11}.Debug|x86.Build.0 = Debug|x86
+		{ADA409C6-1F7A-4B2A-A57D-E5720E264E11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADA409C6-1F7A-4B2A-A57D-E5720E264E11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADA409C6-1F7A-4B2A-A57D-E5720E264E11}.Release|x64.ActiveCfg = Release|x64
+		{ADA409C6-1F7A-4B2A-A57D-E5720E264E11}.Release|x64.Build.0 = Release|x64
+		{ADA409C6-1F7A-4B2A-A57D-E5720E264E11}.Release|x86.ActiveCfg = Release|x86
+		{ADA409C6-1F7A-4B2A-A57D-E5720E264E11}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{133D95CA-7DA6-4FB8-A087-3343628622DF} = {9A7ED981-639A-46DE-A88F-72E7DCABF13C}
-		{A298FF61-94B5-40A6-BD91-17EDDB640FC2} = {9A7ED981-639A-46DE-A88F-72E7DCABF13C}
+		{F6C1B566-5362-4756-BA12-147508630707} = {9A7ED981-639A-46DE-A88F-72E7DCABF13C}
+		{ADA409C6-1F7A-4B2A-A57D-E5720E264E11} = {9A7ED981-639A-46DE-A88F-72E7DCABF13C}
 	EndGlobalSection
 EndGlobal
