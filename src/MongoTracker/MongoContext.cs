@@ -9,6 +9,7 @@ using MongoTracker.Utility.Extensions;
 using MongoTracker.Interfaces;
 using MongoDB.Bson;
 using System.Reflection;
+using System.Security.Authentication;
 
 namespace MongoTracker
 {
@@ -19,16 +20,24 @@ namespace MongoTracker
         protected IDictionary<Type, IMongoSet> MongoSets { get; set; }
         protected internal IDictionary<ObjectId, Tracker> Trackers { get; set; }
         protected internal Dictionary<Type, Type> TrackableTypes { get; set; }
+        protected bool UseSsl { get; set; }
+        protected IMongoDBFactory dbFactory { get; set; }
 
-        public MongoContext(String connectionString)
+        public MongoContext(String connectionString, IMongoDBFactory mongoDBFactory, bool useSsl = false)
         {
             //connectionString = connectionString ?? System.Configuration.ConfigurationManager.ConnectionStrings[this.GetType().Name].ConnectionString;
+            UseSsl = useSsl;
             ConnectionString = MongoUrl.Create(connectionString);
-            this.Database = this.GetDataConnection();
+            dbFactory = mongoDBFactory ?? new DefaultMongoDBFactory();
+            this.Database = dbFactory.CreateMongoDatabaseConnection(ConnectionString, useSsl);
             this.MongoSets = new Dictionary<Type, IMongoSet>();
             this.Trackers = new Dictionary<ObjectId, Tracker>();
             this.TrackableTypes = new Dictionary<Type, Type>();
             this.InitMongoSets();
+        }
+
+        public MongoContext(String connectionString, bool useSsl = false) : this(connectionString, null, useSsl)
+        {
         }
 
         public MongoContext()
@@ -51,12 +60,6 @@ namespace MongoTracker
 
                 this.TrackableTypes.Add(genericType, genericType);
             }
-        }
-
-        protected IMongoDatabase GetDataConnection()
-        {
-            MongoClient client = new MongoClient(this.ConnectionString.ToString());
-            return client.GetDatabase(this.ConnectionString.DatabaseName);
         }
 
         public IMongoSet Set(Type type)
@@ -162,7 +165,7 @@ namespace MongoTracker
 
         public void Dispose()
         {
-           
+
         }
     }
 }

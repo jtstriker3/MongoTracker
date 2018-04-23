@@ -1,5 +1,6 @@
 ﻿{
   "ConnectionStrings": {
-    "mongoTest": "mongodb://localhost:27017/TestOne"
+    "mongoTestOld": "mongodb://localhost:27017/TestOne",
+    "mongoTest": "mongodb://joehomeautomation:PFj0eeBDDwYOtlIkZGy9TDvybP6oVOlO0yTa3d1XWbL1M0n9PXDSEV7oqNqKlxdvMfOSkgPTmjD742HyrK9u3w==@joehomeautomation.documents.azure.com:10255/Test?ssl=true&replicaSet=globaldb"
   } 
 }

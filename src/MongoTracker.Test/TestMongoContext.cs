@@ -8,7 +8,7 @@ namespace MongoTracker.Test
 {
     public class TestMongoContext : MongoContext
     {
-        public TestMongoContext(string connectionString) : base(connectionString) { }
+        public TestMongoContext(string connectionString, bool useSsl = true) : base(connectionString, useSsl) { }
         public MongoSet<Baby> Babies { get; set; }
     }
 }
